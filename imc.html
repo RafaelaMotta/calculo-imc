@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulalinha() {
+      document.write("<br>");
+    }
+
+    function mostra(frase) {
+      document.write(frase);
+      pulalinha();
+    }
+
+    function calculaImc(altura, peso) {
+
+      return peso / (altura * altura);
+      
+    }
+    var nome = prompt("Qual seu nome?");
+    var idade= prompt(nome + ",Informe sua idade");
+    var alturaInformada = prompt(nome + ",informe sua altura");
+    var pesoInformado = prompt(nome + ",informe seu peso");
+
+    var imc = calculaImc(alturaInformada, pesoInformado);
+    mostra(nome +  " seu imc é " + imc);
+  
+    if (imc < 18.5){
+      mostra(" Você está abaixo do recomendado :/");
+    }
+    
+    if(imc > 24.9){
+      mostra (" Você está acima do recomendado :( ");
+    }
+
+    if(imc >= 18.5 && imc <= 24.9){
+      
+        mostra(" Seu IMC está excelente *-*<br>");
+        mostra("Depois de obter o resultado, é verificado em que faixa o resultado se encontra, podendo indicar: Magreza, quando");
+        mostra(" o resultado é menor que 18,5 kg/m2; Normal, quando o resultado está entre 18,5 e 24,9 kg/m2; ... Obesidade, quando o resultado é maior que 30 kg/m.");
+    }
+    
+      //Magreza, quando o resultado é menor que 18,5 kg/m2;
+      //Normal, quando o resultado está entre 18,5 e 24,9 kg/m2;
+      //Sobrepeso, quando o resultado está entre 24,9 e 30 kg/m2;
+      
+  </script>
